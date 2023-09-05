@@ -124,15 +124,18 @@ a:hover {
   font-size: 1.5rem;
   opacity: 0.75;
 }
+.Home-page .Subtitle {
+  margin: 20px 0px;
+}
 
 .ContentBlock {
   position: relative;
   margin: 12px;
-  padding: 40px 20px;
+  padding: 60px 60px;
   border-radius: 30px;
   background: var(--white-color);
-  width: calc(100% - 64px);
-  max-width: 856px;
+  width: calc(100% - 144px);
+  max-width: 776px;
   text-align: left;
 }
 
@@ -147,4 +150,9 @@ a:hover {
   position: absolute;
   top: 50%; left: 50%;
   transform: translateX(-50%) translateY(-50%);
+}
+
+#twitch-embed {
+  border-radius: 20px;
+  overflow: hidden;
 }
