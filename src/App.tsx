@@ -1,5 +1,6 @@
 import React from 'react';
 import './App.css';
+import './App.mobile.css';
 import { Routes, Route, useLocation } from 'react-router-dom';
 
 import Menu from './Components/Menu/Menu';

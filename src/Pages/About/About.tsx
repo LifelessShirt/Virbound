@@ -39,13 +39,10 @@ function About() {
         />
       </ContentBlock>
       <ContentBlock>
-        <Title>🌐 Засновники</Title><br/>
+        <Title>🫡 Засновники</Title><br/>
         <Subtitle>
           Ті герої, які заснували Virbound:<br />
-          <a href="#" target="_blank">Frauбібич </a> 
-          <a href="#" target="_blank">LifelessБуба </a> 
-          <a href="#" target="_blank">HypnoБуба </a> 
-          <a href="#" target="_blank">Дікобуба</a>
+          /* BLOB BLOCKS */
         </Subtitle>
       </ContentBlock>
     </div>

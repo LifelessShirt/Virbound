@@ -1,0 +1,13 @@
+@media screen and (max-width: 920px), screen and (max-device-width: 920px) {
+    .ContentBlock {
+        padding: 40px 30px;
+        width: calc(100% - 84px);
+        max-width: 776px;
+    }
+    .Title {
+        font-size: 2.25em;
+      }
+      .Subtitle {
+        font-size: 1.25rem;
+      }
+}
