@@ -2,6 +2,7 @@ import React from 'react';
 import { ContentBlock } from '../../Components/ContentBlock';
 import { Title } from '../../Components/Title';
 import { Subtitle } from '../../Components/Subtitle';
+import { Footer } from '../../Components/Footer';
 
 function About() {
   return ( <>
@@ -26,7 +27,7 @@ function About() {
         
       </ContentBlock>
     </div>
-    Створено компанією: <a href="https://t.me/Fraumych" target="_blank">HTML Group</a>.
+    <Footer />
     </>
   );
 }

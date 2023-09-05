@@ -45,3 +45,11 @@
   background-color: var(--dark-color-half-transparent);
   color: var(--white-color);
 }
+
+.menu_minebound .menu_block {
+  background-color: var(--accent-color-2-half-transparent);
+}
+.menu_minebound .menu_block:hover {
+  background-color: var(--main-color-half-transparent);
+  color: var(--white-color);
+}

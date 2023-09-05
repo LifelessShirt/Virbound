@@ -1,6 +1,6 @@
 :root {
-    --accent-color: #8ad898;
-    --accent-color-half-transparent: #8ad89888;
+    --accent-color: #a6eac9;
+    --accent-color-half-transparent: #a6eac988;
     --accent-color-2: #7abc86;
     --accent-color-2-half-transparent: #7abc8688;
     --main-color: #304439;
@@ -81,18 +81,32 @@ a:hover {
 
 .Home-page {
   background: var(--accent-color);
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0px 0px 15px 15px;
 }
 
 .Minebound-page {
-  background: var(--accent-color);
+  background: var(--accent-color-2);
+  margin: 0;
+  padding: 0;
+  width: 100%;
   display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0px 0px 15px 15px;
 }
 
 .About-page {
   background: var(--gray-color);
-  background: linear-gradient(180deg, rgba(189,190,47,0) 0%, var(--gray-color));
   margin: 0;
-  padding: 0;
+  padding: 64px 0px 0px 0px;
   width: 100%;
   display: flex;
   flex-direction: column;

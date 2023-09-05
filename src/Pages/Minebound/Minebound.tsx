@@ -2,12 +2,16 @@ import React from 'react';
 import { ContentBlock } from '../../Components/ContentBlock';
 import { Title } from '../../Components/Title';
 import { Subtitle } from '../../Components/Subtitle';
+import { Footer } from '../../Components/Footer';
 
 function Minebound() {
   return ( <>
     <div className="Minebound-page">
       <div className="fullSizeBlock"><div className="fullSizeBlockInner">
-        <Title>Абоба</Title>
+        <Title>MineBound</Title>
+        <Subtitle>
+          Сервер який дозволяє розкрити твій творчій потенціал
+        </Subtitle>
       </div></div>
       <ContentBlock>
         <Title>🤔 Що є Вірбаунд?</Title>
@@ -23,6 +27,7 @@ function Minebound() {
         </Subtitle>
       </ContentBlock>
     </div>
+    <Footer />
   </>
   );
 }
