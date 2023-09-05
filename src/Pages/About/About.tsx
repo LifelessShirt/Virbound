@@ -34,8 +34,8 @@ function About() {
           onVideoPlay={function noRefCheck(){}}
           onVideoReady={function noRefCheck(){}}
           withChat={false}
-          height={"480px"}
-          width={"100%"}
+          height={""}
+          width={""}
         />
       </ContentBlock>
       <ContentBlock>

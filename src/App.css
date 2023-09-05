@@ -70,10 +70,10 @@ a:hover {
   z-index: 2;
 }
 .MainHome {
-  background: var(--accent-color);
+  background: var(--dark-color);
 }
 .MainMinebound {
-  background: var(--accent-color-2);
+  background: var(--dark-color);
 }
 .MainAbout {
   background: var(--gray-color);
@@ -88,7 +88,7 @@ a:hover {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  border-radius: 0px 0px 15px 15px;
+  border-radius: 0px;
 }
 
 .Minebound-page {
@@ -130,6 +130,7 @@ a:hover {
 
 .ContentBlock {
   position: relative;
+  display: inline;
   margin: 12px;
   padding: 60px 60px;
   border-radius: 30px;
@@ -153,6 +154,15 @@ a:hover {
 }
 
 #twitch-embed {
+  height: 480px;
+  width: 100%;
   border-radius: 20px;
   overflow: hidden;
 }
+
+.Footer {
+  padding: 10px;
+  color: var(--white-color-half-transparent);
+}
+.Footer a {color: var(--white-color);}
+.Footer a:hover {text-decoration: underline;}

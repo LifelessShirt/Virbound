@@ -5,9 +5,13 @@
         max-width: 776px;
     }
     .Title {
-        font-size: 2.25em;
-      }
-      .Subtitle {
-        font-size: 1.25rem;
-      }
+      font-size: 2.25em;
+    }
+    .Subtitle {
+      font-size: 1.25rem;
+    }
+    #twitch-embed {
+        height: 180px;
+        width: 100%;
+    }
 }
