@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 import Style from './Menu.module.css';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 interface MenuProps {currentPath:string}
 
@@ -11,7 +11,7 @@ const Menu = ({currentPath}:MenuProps) => {
             <div className={Style.menu_block}>Головна</div>
         </Link>
         <Link to="/minebound">
-            <div className={Style.menu_block}>Minebound</div>
+            <div className={Style.menu_block}>MineBound</div>
         </Link>
         <Link to="/about">
             <div className={Style.menu_block}>Про нас</div>

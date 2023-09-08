@@ -1,4 +1,7 @@
 @media screen and (max-width: 920px), screen and (max-device-width: 920px) {
+    .fullSizeBlockInner {
+      width: 90%;
+    }
     .ContentBlock {
         padding: 40px 30px;
         width: calc(100% - 84px);
@@ -9,6 +12,7 @@
     }
     .Subtitle {
       font-size: 1.25rem;
+      text-align: left;
     }
     #twitch-embed {
         height: 180px;

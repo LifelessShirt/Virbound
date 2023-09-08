@@ -51,6 +51,7 @@ body {
   background-color: var(--dark-color);
   color: var(--main-color);
   margin: 0;
+  padding: 0;
 }
 
 a {

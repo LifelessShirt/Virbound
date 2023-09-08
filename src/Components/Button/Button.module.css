@@ -4,6 +4,7 @@
   padding: 15px 20px;
   margin: 6px;
   background: transparent;
+  color: var(--main-color);
   border: 3px solid var(--main-color);
   border-radius: 30px;
   font-size: 1em;
@@ -20,4 +21,11 @@
 .ButtonFocus:hover {
     background: var(--main-color);
     border: 3px solid var(--main-color);
+}
+
+@media screen and (max-width: 920px), screen and (max-device-width: 920px) {
+  .Button {
+    display: block;
+    width: 100%;
+  }
 }
