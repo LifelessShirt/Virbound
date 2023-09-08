@@ -17,11 +17,11 @@
   z-index: 3;
 }
 
-.menu_about {
+.about {
   background: var(--gray-color-half-transparent);
 }
 
-.menu_minebound {
+.minebound {
   background: var(--accent-color-2-half-transparent);
 }
 
@@ -38,18 +38,18 @@
   background-color: var(--accent-color-2-half-transparent);
 }
 
-.menu_about .menu_block {
+.about .menu_block {
   background-color: var(--white-color-half-transparent);
 }
-.menu_about .menu_block:hover {
+.about .menu_block:hover {
   background-color: var(--dark-color-half-transparent);
   color: var(--white-color);
 }
 
-.menu_minebound .menu_block {
+.minebound .menu_block {
   background-color: var(--accent-color-2-half-transparent);
 }
-.menu_minebound .menu_block:hover {
+.minebound .menu_block:hover {
   background-color: var(--main-color-half-transparent);
   color: var(--white-color);
 }

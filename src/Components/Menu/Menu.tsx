@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import Style from './Menu.module.css';
 import { Link } from 'react-router-dom';
 
@@ -6,7 +6,7 @@ interface MenuProps {currentPath:string}
 
 const Menu = ({currentPath}:MenuProps) => {
   return (
-    <div className={`${Style.menu} ${currentPath == "/about" ? Style.menu_about : currentPath == "/minebound" ? Style.menu_minebound : null}`}>
+    <div className={`${Style.menu} ${Style[currentPath.slice(1)] || ''}`}>
         <Link to="/">
             <div className={Style.menu_block}>Головна</div>
         </Link>
