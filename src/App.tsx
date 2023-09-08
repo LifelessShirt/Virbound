@@ -11,7 +11,7 @@ import About from './Pages/About/About';
 const App = () => {
   var pathname = useLocation().pathname;
   return (
-    <div className={`Main`/*${pathname == '/' ? 'MainHome' : ''} : pathname == '/minebound' ? 'MainMinebound' : pathname == '/about' ? 'MainAbout' : ''}*/}>
+    <div className={`Main`/*${pathname == '/' ? 'MainHome' : pathname == '/minebound' ? 'MainMinebound' : pathname == '/about' ? 'MainAbout' : ''}*/}>
     <Menu currentPath={pathname} />
     <Routes>
       <Route path="/" element={<Home />} />
