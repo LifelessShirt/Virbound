@@ -3,7 +3,7 @@
 A project for small community of gamers.
 
 ## What this project contains:
-#### 🟢 Beatiful design  
+#### 🟢 Beautiful design  
 #### 🔴 Registration and authentification  
 #### 🔴 EMail functions  
 #### ...more functions will apear later.
