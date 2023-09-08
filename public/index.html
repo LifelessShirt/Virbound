@@ -9,9 +9,24 @@
     <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
     <title>Virbound</title>
+    <style>
+      .loader {
+        position: absolute;
+        top: calc(50% - 128px); left: calc(50% - 128px);
+        background: center / cover no-repeat url("%PUBLIC_URL%/loader.png");
+        width: 256px;
+        height: 256px;
+        animation: loader 2s ease-in-out infinite;
+      }
+      @keyframes loader {
+        from {transform: rotate(0deg);} to {transform: rotate(360deg);}
+      }
+    </style>
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
+    <div id="root">
+      <div class="loader"></div>
+    </div>
   </body>
 </html>
