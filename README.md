@@ -1,6 +1,12 @@
 # Virbound
 
-A small project with an account system, two-factor email authentication, mailing lists, a bonus system for participants and much more!
+A project for small community of gamers.
+
+## What this project contains:
+#### 🟢 Beatiful design  
+#### 🔴 Registration and authentification  
+#### 🔴 EMail functions  
+#### ...more functions will apear later.
 
 ## Developed by
 ### https://lifeless.me
