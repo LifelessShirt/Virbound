@@ -9,27 +9,27 @@ import { Button } from '../../Components/Button';
 function Home() {
   return ( <>
     <div className="Home-page">
-<div className={Style.background}>
-		<div className={Style.blur}>
-			<span></span>
-			<span></span>
-			<span></span>
-			<span></span>
-			<span></span>
-			<span></span>
-			<span></span>
-			<span></span>
-			<span></span>
-			<span></span>
-			<span></span>
-			<span></span>
-			<span></span>
-			<span></span>
-			<span></span>
+		<div className={Style.background}>
+			<div className={Style.blur}>
+				<span></span>
+				<span></span>
+				<span></span>
+				<span></span>
+				<span></span>
+				<span></span>
+				<span></span>
+				<span></span>
+				<span></span>
+				<span></span>
+				<span></span>
+				<span></span>
+				<span></span>
+				<span></span>
+				<span></span>
+			</div>
+			<div className={Style.filterdodge}></div>
+			<div className={Style.filterburn}></div>   
 		</div>
-  		<div className={Style.filterdodge}></div>
-  		<div className={Style.filterburn}></div>   
-	</div>
       <div className="fullSizeBlock"><div className="fullSizeBlockInner">
         <Title>Вітаємо у Вірбаунд</Title>
         <Subtitle>

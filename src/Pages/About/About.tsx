@@ -38,13 +38,6 @@ function About() {
           width={""}
         />
       </ContentBlock>
-      <ContentBlock>
-        <Title>🫡 Засновники</Title><br/>
-        <Subtitle>
-          Ті герої, які заснували Virbound:<br />
-          /* BLOB BLOCKS */
-        </Subtitle>
-      </ContentBlock>
     </div>
     <Footer />
     </>
