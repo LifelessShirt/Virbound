@@ -7,6 +7,7 @@ import Menu from './Components/Menu/Menu';
 import Home from './Pages/Home/Home';
 import Minebound from './Pages/Minebound/Minebound';
 import About from './Pages/About/About';
+import User from './Pages/User/User';
 
 const App = () => {
   var pathname = useLocation().pathname;
@@ -17,6 +18,7 @@ const App = () => {
       <Route path="/" element={<Home />} />
       <Route path="/minebound" element={<Minebound />} />
       <Route path="/about" element={<About />} />
+      <Route path="/user" element={<User />} />
     </Routes>
     </div>
   </>);

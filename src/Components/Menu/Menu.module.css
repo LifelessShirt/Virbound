@@ -99,6 +99,7 @@ a {
   .opened {
     padding: 48px 16px 48px 16px;
     border: 1px solid var(--dark-color-half-transparent);
+    border-top: none;
     background: var(--white-color-half-transparent)!important;
     max-height: calc(100% - 74px);
   }
