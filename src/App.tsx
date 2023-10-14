@@ -10,13 +10,9 @@ import About from './Pages/About/About';
 
 const App = () => {
   var pathname = useLocation().pathname;
-  const [menuStatus, setMenuStatus] = useState('closed');
-  const menuChangeStatus = () => {
-    setMenuStatus(menuStatus === 'closed' ? 'opened' : 'closed')
-  }
   return (<>
-    <Menu currentPath={pathname} status={menuStatus} onClick={menuChangeStatus}/>
-    <div className={`Main Main-${menuStatus}`}>
+    <Menu currentPath={pathname}/>
+    <div className={`Main`}>
     <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/minebound" element={<Minebound />} />

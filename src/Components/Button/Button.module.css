@@ -23,7 +23,7 @@
     border: 3px solid var(--main-color);
 }
 
-@media (max-width: 920px) {
+@media (max-width: 896px) {
   .Button {
     display: block;
     width: 100%;
