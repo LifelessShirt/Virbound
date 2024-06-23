@@ -8,6 +8,7 @@ import Home from './Pages/Home/Home';
 import Minebound from './Pages/Minebound/Minebound';
 import About from './Pages/About/About';
 import User from './Pages/User/User';
+import Alerts from './Utils/Alerts/Alerts';
 
 const App = () => {
   var pathname = useLocation().pathname;

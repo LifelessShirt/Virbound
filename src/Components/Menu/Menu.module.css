@@ -11,7 +11,7 @@
   max-width: 864px;
   text-align: center;
   transform: translateX(-50%);
-  background: var(--accent-color-half-transparent);
+  background: var(--white-color-half-transparent);
   border-radius: 0px 0px 25px 25px;
   backdrop-filter: blur(10px);
   overflow: hidden;
@@ -27,12 +27,16 @@ a {
   display: inline-block;
   width: auto;
   color: var(--main-color);
-  background-color: var(--accent-color-half-transparent);
+  background-color: var(--white-color-half-transparent);
   padding: 10px 20px;
   border-radius: 20px;
 }
 .menu_block:hover {
   background-color: var(--accent-color-2-half-transparent);
+}
+
+.home {
+  background-color: var(--accent-color-half-transparent);
 }
 
 .about {
@@ -43,6 +47,9 @@ a {
   background: var(--accent-color-2-half-transparent);
 }
 
+.home .menu_block {
+  background-color: var(--accent-color-half-transparent);
+}
 .about .menu_block {
   background-color: var(--white-color-half-transparent);
 }

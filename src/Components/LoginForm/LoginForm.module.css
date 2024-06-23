@@ -14,12 +14,29 @@
     border-radius: 4px;
     font-size: 1em;
 }
-.form button {
-    background: var(--dark-color);
-    color: var(--white-color);
-    border: none;
+button {
+    background: var(--white-color);
+    color: var(--dark-color);
+    border: 1px solid var(--dark-color-half-transparent);
     padding: 8px 16px;
     margin: 6px;
     border-radius: 18px;
     font-size: 1em;
+    cursor: pointer;
+}
+.hr {
+    position: relative;
+    margin: 20px auto;
+    width: 95%;
+    height: 1px;
+    text-align: center;
+    background: var(--dark-color-half-transparent);
+}
+.hr::after {
+    content: 'or';
+    position: absolute;
+    top: calc(50% - 10px); left: calc(50% - 10px);
+    height: 20px;
+    width: 20px;
+    background: var(--white-color);
 }

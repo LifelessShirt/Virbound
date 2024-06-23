@@ -1,0 +1,64 @@
+/* Alerts styles */
+.alert-body {
+    position: fixed;
+    top: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    gap: 15px;
+    z-index: 999;
+    padding: 15px 15px 0 0;
+    max-width: calc(100% - 30px);
+}
+.alert-hidden {
+    position: absolute;
+    top: -20px;
+    transition: top 1s;
+}
+.alert {
+    margin: 0;
+    padding: 10px 10px 10px 42px;
+    border-radius: 10px;
+    opacity: 0;
+    display: block;
+    animation: alert 7s linear;
+    -webkit-animation: alert 7s linear;
+    -moz-animation: alert 7s linear;
+    -o-animation: alert 7s linear;
+}
+.alert-warning {
+    background: 11px / 20px no-repeat url(../../Media/alert-warning.png);
+    background-color: #f38686df;
+    border: 2px solid #cb7474;
+    --alert-color: #f38686;
+    
+}
+.alert-info {
+    background: 11px / 20px no-repeat url(../../Media/alert-info.png);
+    background-color: #869ff3df;
+    border: 2px solid #7488cb;
+    --alert-color: #869ff3;
+}
+.alert-success {
+    background: 11px / 20px no-repeat url(../../Media/alert-success.png);
+    background-color: #86f391df;
+    border: 2px solid #74cb7a;
+    --alert-color: #86f391;
+}
+
+@keyframes alert {
+    0% {
+        opacity: 0;
+    }
+    2% {
+        opacity: 1;
+    }
+    10% {box-shadow: 0px 0px 20px 10px var(--alert-color);}
+    90% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}

@@ -9,7 +9,7 @@ const Menu = ({currentPath}:MenuProps) => {
     const menuChangeStatus = () => {
         setMenuStatus(menuStatus === 'closed' ? 'opened' : 'closed')
     }
-    const path = Style[currentPath.slice(1)] || '';
+    const path = Style[currentPath!='/'?currentPath.slice(1):'home'] || '';
     return ( <>
         <div className={`${Style.menu} ${path} ${Style[menuStatus]}`}>
             <button className={Style.menu_mobile_toggler} onClick={menuChangeStatus}></button>
@@ -21,6 +21,9 @@ const Menu = ({currentPath}:MenuProps) => {
             </Link>
             <Link to="/about">
                 <div className={Style.menu_block} onClick={menuChangeStatus}>Про нас</div>
+            </Link>
+            <Link to="/user">
+                <div className={Style.menu_block} onClick={menuChangeStatus}>🫥</div>
             </Link>
       </div>
     </>);

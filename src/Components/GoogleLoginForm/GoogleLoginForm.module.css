@@ -1,0 +1,26 @@
+.form {
+    background: transparent;
+    border: 1px solid var(--dark-color-half-transparent);
+    padding: 16px;
+    border-radius: 16px;
+}
+input {
+    background: var(--white-color);
+    color: var(--dark-color);
+    border: 1px solid var(--dark-color-half-transparent);
+    width: calc(100% - 26px);
+    padding: 5px 7px;
+    margin: 6px;
+    border-radius: 4px;
+    font-size: 1em;
+}
+.googleLoginButton {
+    background: var(--dark-color);
+    color: var(--white-color);
+    border: none;
+    padding: 8px 16px;
+    margin: 6px;
+    border-radius: 18px;
+    font-size: 1em;
+    cursor: pointer;
+}
