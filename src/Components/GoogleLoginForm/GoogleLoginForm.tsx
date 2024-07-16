@@ -1,8 +1,9 @@
 import Style from './GoogleLoginForm.module.css';
 import { useGoogleLogin } from '@react-oauth/google';
 import axios from 'axios';
+import Alerts from '../../Utils/Alerts/Alerts';
 
-const GoogleLoginForm = ({ setResponseStatus }:{setResponseStatus:React.Dispatch<React.SetStateAction<string>>}) => {
+const GoogleLoginForm = ({ setResponseStatus }:{setResponseStatus:React.Dispatch<React.SetStateAction<any>>}) => {
   const googleLogin = useGoogleLogin({
     onSuccess: (responseToken) => {
       axios.get("https://www.googleapis.com/oauth2/v3/userinfo", {
@@ -16,20 +17,19 @@ const GoogleLoginForm = ({ setResponseStatus }:{setResponseStatus:React.Dispatch
             account_type: 'google'
           })
           .then(function (response) {
-            console.log(response);
-            !response.data.error ? 
-            localStorage.setItem("access_token", response.data.access_token)
-            : 
-            console.log(response.data.status);
-            setResponseStatus(response.data.status);
+            if (!response.data.error) {
+              localStorage.setItem("access_token", response.data.access_token);
+              window.location.reload();
+            } else {
+              console.log(response.data.status);
+              setResponseStatus(<Alerts type="warning" message={response.data.status} />);
+            }
           })
           .catch(function (error) {
             console.log(error);
           });
       })
       .catch(function(errorGoogle) {
-        console.log(errorGoogle);
-      }).catch(function(errorGoogle) {
         console.log(errorGoogle);
       });
     } 

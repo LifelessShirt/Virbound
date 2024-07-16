@@ -1,9 +1,18 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Style from './LoginForm.module.css';
 import GoogleLoginForm from '../GoogleLoginForm/GoogleLoginForm';
 import axios from 'axios';
+import Alerts from '../../Utils/Alerts/Alerts';
 
 const LoginForm = () => {
+  
+  // Temporary
+  const [responseStatus, setResponseStatus] = useState<any>("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [password2, setPassword2] = useState("");
+  const [passwordInput, setPasswordInput] = useState("password");
+  const [regForm, setRegForm] = useState(false);
 
   // Function to log in
   const authSubmit = (e:any) => {
@@ -22,10 +31,11 @@ const LoginForm = () => {
       if(!response.data.error) { 
         localStorage.setItem("access_token", response.data.access_token)
         window.location.reload()
-      } else { setResponseStatusAuth(response.data.status) }
+      } else { setResponseStatus(<Alerts type="warning" message={response.data.status} />) }
     })
     .catch((error) => {
       console.log(error);
+      <Alerts type="success" message={error} />
     });
   }
 
@@ -46,23 +56,24 @@ const LoginForm = () => {
       console.log(response);
       if(!response.data.error) {
         localStorage.setItem("access_token", response.data.access_token)
-      } else { setResponseStatusReg(response.data.status) }
+        setResponseStatus(<Alerts type="success" message="Your account was created. Confirmation email was sent to you." />)
+        setRegForm(false)
+      } else { setResponseStatus(<Alerts type="warning" message={response.data.status} />) }
     })
     .catch((error) => {
       console.log(error);
+      <Alerts type="success" message={error} />
     })
     :
-    setResponseStatusReg("Passwords do not match.")
+    setResponseStatus(<Alerts type="su" message="Passwords do not match!" />);
   }
   
-  // Temporary
-  const [responseStatusAuth, setResponseStatusAuth] = useState("");
-  const [responseStatusReg, setResponseStatusReg] = useState("");
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-  const [password2, setPassword2] = useState("");
-  const [passwordInput, setPasswordInput] = useState("password");
-  const [regForm, setRegForm] = useState(false);
+  useEffect(() => {
+    const clearResponses = setTimeout(() => {
+      setResponseStatus("");
+    }, 7000);
+    return () => clearTimeout(clearResponses);
+  }, [responseStatus]);
 
   return (
     !regForm ?
@@ -74,9 +85,9 @@ const LoginForm = () => {
       <button type="submit">Sign in</button>
     </form>
     <div className={Style.hr}></div>
-    <GoogleLoginForm setResponseStatus={setResponseStatusAuth} />
+    <GoogleLoginForm setResponseStatus={setResponseStatus} />
     <button onClick={() => setRegForm(true)}>New to Virbound? Join now</button>
-    <div>{responseStatusAuth}</div>
+    {responseStatus}
     </>
     :
     <>
@@ -87,6 +98,7 @@ const LoginForm = () => {
       <button type="button" onClick={() => passwordInput === 'password'?setPasswordInput('text'):setPasswordInput('password')}>👁️</button>
       <button type="submit">Register</button>
     </form>
+    {responseStatus}
     </>
     
   );

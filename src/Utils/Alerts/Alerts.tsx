@@ -1,13 +1,15 @@
 import { useEffect, useState } from 'react';
 import './Alerts.css';
 
-export const ShowAlert = (type:string, message:string) => {
-  localStorage.setItem("alertType", type);
-  localStorage.setItem("alertMessage", message);
-  console.log("Set new alert");
-}
+export interface AlertsProps {message:React.ReactNode,type:string}
 
-const Alerts = () => {
+const Alerts = ({message,type,}:AlertsProps) => {
+  return ( 
+    <div className={'alert alert-'+type}>
+      {message}
+    </div>
+  );
+  /*
   const [alerts, setAlerts]  = useState<{ id:number, type:string, message:string }[]>([]);
   const [alertNum, setAlertNum] = useState(0);
   const addAlert = (type:string, message:string) => {
@@ -41,6 +43,7 @@ const Alerts = () => {
       ))}
     </div>
   );
+  */
 }
 
 export default Alerts;

@@ -17,15 +17,19 @@
     transition: top 1s;
 }
 .alert {
-    margin: 0;
+    position: fixed;
+    top: 0px; left: 50%;
+    width: calc(100% - 76px);
+    max-width: 840px;
     padding: 10px 10px 10px 42px;
-    border-radius: 10px;
+    border-radius: 15px;
     opacity: 0;
-    display: block;
     animation: alert 7s linear;
     -webkit-animation: alert 7s linear;
     -moz-animation: alert 7s linear;
     -o-animation: alert 7s linear;
+    transform: translateX(-50%);
+    z-index: 999;
 }
 .alert-warning {
     background: 11px / 20px no-repeat url(../../Media/alert-warning.png);
@@ -53,12 +57,17 @@
     }
     2% {
         opacity: 1;
+        top: 76px;
     }
-    10% {box-shadow: 0px 0px 20px 10px var(--alert-color);}
-    90% {
+    97% {
         opacity: 1;
+        top: 76px;
+    }
+    99% {
+        opacity: 0;
+        display: block;
     }
     100% {
-        opacity: 0;
+        display: none;
     }
 }
