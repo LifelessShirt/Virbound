@@ -1,28 +1,55 @@
 .form {
     background: transparent;
-    border: 1px solid var(--dark-color-half-transparent);
-    padding: 16px;
-    border-radius: 16px;
+    text-align: left;
 }
 .form input {
-    background: var(--white-color);
-    color: var(--dark-color);
-    border: 1px solid var(--dark-color-half-transparent);
-    width: calc(100% - 26px);
-    padding: 5px 7px;
+    background: var(--gray-2);
+    color: var(--dark);
+    width: calc(100% - 40px);
+    padding: 10px 14px;
     margin: 6px;
-    border-radius: 4px;
+    border-radius: 12px;
     font-size: 1em;
 }
+.passwordForm {
+    position: relative;
+    height: 50px;
+    margin:0; padding:0;
+}
+.passwordHidder {
+    position: absolute;
+    top: 6px;
+    right: 6px;
+    height: 40px;
+    width: 40px;
+    background: center / 20px no-repeat url(../../Media/eye.svg);
+    background-color: transparent;
+    border-radius: 4px;
+    opacity: 1;
+}
+.passwordHidder.password {
+    background: center / 20px no-repeat url(../../Media/eye.svg);
+}
+.passwordHidder.text {
+    background: center / 20px no-repeat url(../../Media/eye-closed.svg);
+}
 button {
-    background: var(--white-color);
-    color: var(--dark-color);
-    border: 1px solid var(--dark-color-half-transparent);
-    padding: 8px 16px;
+    background: var(--accent);
+    color: var(--dark);
+    border: none;
+    display: inline-block;
+    padding: 12px 16px;
     margin: 6px;
-    border-radius: 18px;
+    border-radius: 12px;
     font-size: 1em;
     cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+}
+button.register {
+    background: var(--gray-2);
+    opacity: 0.7;
+    display: block;
+    width: calc(100% - 12px);
 }
 .hr {
     position: relative;
@@ -30,13 +57,13 @@ button {
     width: 95%;
     height: 1px;
     text-align: center;
-    background: var(--dark-color-half-transparent);
+    background: var(--gray-2);
 }
 .hr::after {
     content: 'or';
     position: absolute;
-    top: calc(50% - 10px); left: calc(50% - 10px);
-    height: 20px;
-    width: 20px;
-    background: var(--white-color);
+    top: calc(50% - 10px); left: calc(50% - 15px);
+    height: 30px;
+    width: 30px;
+    background: var(--white);
 }

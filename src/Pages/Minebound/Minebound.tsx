@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import { ContentBlock } from '../../Components/ContentBlock';
 import { Title } from '../../Components/Title';
 import { Subtitle } from '../../Components/Subtitle';
@@ -7,36 +7,43 @@ import { Button } from '../../Components/Button';
 
 function Minebound() {
   return ( <>
-    <div className="Minebound-page">
-      <div className="fullSizeBlock"><div className="fullSizeBlockInner">
-        <div className="minebound-logo"></div>
-        <Title>MineBound</Title>
+    <div className="wrapper">
+    <video className='minebound-video' autoPlay muted loop>
+        <source src="videos/minebound.bg.webm" type="video/webm" />
+    </video>
+    <div className='minebound-video-hover'></div>
+      <div className="fullSizeBlock"><div className="fullSizeBlockMinebound">
+        <Title>MineBound</Title><br />
         <Subtitle>
-          Сервер який дозволяє розкрити твій творчій потенціал
+        A server that allows you to unleash your creative potential
         </Subtitle><br />
-        <Button type='focus' customOnClick='copyIP'>Копіювати IP</Button><br />
-        Версія 1.20.1 • Ліцензія не обов'язкова
+        <Button type='focus' customOnClick='copyIP'>Copy IP</Button><br />
+        Version 1.20.1 • License is not required
       </div></div>
       <ContentBlock>
-        <Title>🚀 Спільні проекти</Title><br/>
+        <Title>🌶️ Spicy vanilla experience</Title><br/>
         <Subtitle>
-          Гравці серверу об'єднуються для реалізації спільних проектів які вони вигадують. І все це назавжди залишиться в історії серверу.
+          We are playing on version 1.20.2 with some ✨ magic and ⚙️ industrial mods, 
+          that provide a new experience in-game.
         </Subtitle><br/>
-        <Title>🛸 Різномаїтні івенти</Title><br/>
+        <Title>🛸 Story</Title><br/>
         <Subtitle>
-          На сервері доволі часто проводяться івенти, протягом яких можна заробляти незвичайні винагороди та призи.
+          On a server you can saw how new stories has write everyday. 
+          Also we have an global storyline, that progresses together with players.
         </Subtitle><br/>
-        <Title>💪 Ком'юніті</Title><br/>
+        <Title>💪 Cooperate</Title><br/>
         <Subtitle>
-          В нас надзвичайно добре і веселе ком'юніті в якому знайдеться місце кожному, хто поважає інших гравців та готовий привнести щось своє в наш світ.
+          Cooperate with other players. Build, craft, explore and fight together as bloody brothers.
         </Subtitle>
       </ContentBlock>
       <ContentBlock>
-        <Title>🤔 Як отримати доступ?</Title><br/>
+        <Title>🤔 How to play</Title><br/>
         <Subtitle>
-        Для отрамання доступу до серверу необхідно купити перепустку на нашому Twitch каналі за бали каналу. Перепустка коштує 20 000 балів. Дарувати або купувати в подарунок заборонено.
+        It's not hard, just download our build, extract it in this path:<br/>
+        <p style={{background: "var(--dark-ht)", display: "inline", padding: "5px", borderRadius: "5px"}}>%APPDATA%/.minecraft/mods</p><br/>
+        Install latest Fabric 1.20.2 and run it. That's all!<br/>
         </Subtitle><br/>
-        <Button type="focus">Отримати перепустку</Button>
+        <a href='https://virbound.com/media/minebound-mods-latest.zip' target='_download'><Button>Download build</Button></a>
       </ContentBlock>
     </div>
     <Footer />

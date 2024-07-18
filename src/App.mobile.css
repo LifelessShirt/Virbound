@@ -1,21 +1,72 @@
 @media screen and (max-width: 896px), screen and (max-device-width: 896px) {
-    .fullSizeBlockInner {
-      width: 90%;
-    }
-    .ContentBlock {
-        padding: 40px 30px;
-        width: calc(100% - 84px);
-        max-width: 776px;
-    }
-    .Title {
-      font-size: 2.25em;
-    }
-    .Subtitle {
-      font-size: 1.25rem;
-      text-align: left;
-    }
-    #twitch-embed {
-        height: 180px;
-        width: 100%;
-    }
+  .fullSizeBlock {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    vertical-align: middle;
+    justify-content: center;
+    flex-wrap: nowrap;
+    margin: 0; padding: 0;
+    width: 100%;
+    height: 100vh;
+    max-width: 1280px;
+    overflow: hidden;
+  }
+  .fullSizeBlockInnerText {
+    position: relative;
+    padding: 20px;
+    flex-basis: 100%;
+    z-index: 3;
+  }
+  .fullSizeBlockInnerImage {
+    position: relative;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    flex-basis: 0%;
+    z-index: 2;
+    opacity: 0.2;
+    filter: blur(2px);
+    transform: rotate(20deg) scale(2);
+  }
+  .fullSizeBlockInnerImage .image {
+    position: relative;
+    background: center/cover no-repeat url(/src/Media/gamepad-3d.png);
+    width: 512px;
+    height: 512px;
+    margin: 0 auto;
+    animation: none;
+    -webkit-animation: none;
+    -moz-animation: none;
+  }
+  .fullSizeBlockInnerImage .image-shadow {
+    display: none;
+  }
+
+  .ContentBlock {
+    padding: 40px 30px;
+    width: calc(100% - 84px);
+    max-width: 776px;
+  }
+
+  .Title {
+    font-size: 2.25em;
+  }
+
+  .Subtitle {
+    font-size: 1.25rem;
+    text-align: left;
+  }
+
+  button.userLogout {
+    position: absolute;
+    top: 35px; right: 30px;
+  
+  }
+
+  #twitch-embed {
+    height: 180px;
+    width: 100%;
+  }
 }

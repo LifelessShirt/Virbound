@@ -1,0 +1,70 @@
+.wrapper {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+}
+.bg {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--gray-3-ht);
+    backdrop-filter: blur(5px);
+    animation: modal-bg 0.25s linear;
+    -webkit-animation: modal-bg 0.25s ease-in-out;
+    -moz-animation: modal-bg 0.25s ease-in-out;
+}
+.modal {
+    position: absolute;
+    bottom: 50%; left: 50%;
+    transform: translateX(-50%) translateY(50%);
+    max-width: 920px;
+    min-width: 350px;
+    padding: 20px;
+    background: var(--white);
+    border-radius: 25px;
+    z-index: 11;
+    animation: modal 0.25s linear;
+    -webkit-animation: modal 0.25s ease-in-out;
+    -moz-animation: modal 0.25s ease-in-out;
+}
+@keyframes modal {
+    0% {
+        bottom: 45%;
+        opacity: 0;
+    }
+    100% {
+        bottom: 50%;
+        opacity: 1;
+    }
+}
+@keyframes modal-bg {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+@media (max-width: 896px) {
+    .modal {
+        position: absolute;
+        bottom: 0; left: 0;
+        transform: none;
+        width: calc(100% - 40px);
+        min-width: 220px;
+        height: auto;
+        border-radius: 25px 25px 0px 0px;
+        z-index: 11;
+    }
+    @keyframes modal {
+        0% {
+            bottom: -50%;
+        }
+        100% {
+            bottom: 0%;
+        }
+    }
+}

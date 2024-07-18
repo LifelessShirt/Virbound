@@ -18,8 +18,9 @@
 }
 .alert {
     position: fixed;
-    top: 0px; left: 50%;
-    width: calc(100% - 76px);
+    bottom: 0px; left: 50%;
+    width: calc(100% - 102px);
+    backdrop-filter: blur(5px);
     max-width: 840px;
     padding: 10px 10px 10px 42px;
     border-radius: 15px;
@@ -57,11 +58,11 @@
     }
     2% {
         opacity: 1;
-        top: 76px;
+        bottom: 20px;
     }
     97% {
         opacity: 1;
-        top: 76px;
+        bottom: 20px;
     }
     99% {
         opacity: 0;

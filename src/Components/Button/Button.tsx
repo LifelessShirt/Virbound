@@ -8,7 +8,7 @@ export function Button({children,type,customOnClick}:ButtonProps) {
   const clickFunc = (e:any) => {
     if (e === 'copyIP') {
       navigator.clipboard.writeText('srv.virbound.com');
-      setChild("IP скопійовано");
+      setChild("IP copied");
     } else {
       // nothing
     }

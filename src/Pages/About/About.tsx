@@ -7,24 +7,25 @@ import { Footer } from '../../Components/Footer';
 
 function About() {
   return ( <>
-    <div className="About-page">
+    <div className="wrapper wrapperPadding">
       <ContentBlock>
-        <Title>🤔 Що є Вірбаунд?</Title><br/>
+        <Title>🤔 What the <b>Virbound</b>?</Title><br/>
         <Subtitle>
-          Вірбаунд - це об'єднання творчіх і цікавих людей. 
-          Ми любимо разом пограти в якісь ігри, подивитись різномаїтні відосики на Ютубі, пострімити наші страждання у соулс-лайк іграх, 
-          займатись жорстким порєвом з перекомпіляцією ядра Лінукс і багато чого іншого. 
-          Кратко кажучи - в нас веселий і найкрутіший колектив друзяк.
+        Virbound is a community of creative and interesting people. 
+        We like to play games together, watch various YouTube videos, stream our suffering in souls-like games, 
+        do hard tearing with Linux kernel recompilation, and much more. 
+        In short, we have the funniest and coolest group of friends.
         </Subtitle><br/>
         <Subtitle>
-          Доречі кажучи: Вірбаунд (від англійского Virbound) - це комбінація слів Virtual і Bound, 
-          що можна перекласти як Віртуально Зв'язані.
+        By the way: Virbound is a combination of the words Virtual and Bound, 
+        which can be translated as “virtually connected”.
         </Subtitle>
       </ContentBlock>
       <ContentBlock>
-        <Title>🎭 Наші трансляції</Title><br/>
+        <Title>🎭 Our streams</Title><br/>
         <Subtitle>
-          Як вже було написано вище - ми любимо проводити трансляції на Twitch, тож долучайтесь до нас:
+          As was mentioned before, sometimes we do livestreams.<br/>
+          Here is our channel:
         </Subtitle>
         <TwitchEmbed
           channel="LifelessShirt"

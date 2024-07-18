@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useContext, useEffect, useState } from 'react';
 
 import LoginForm from '../../Components/LoginForm/LoginForm';
 import { ContentBlock } from '../../Components/ContentBlock';
@@ -8,8 +8,11 @@ import { Footer } from '../../Components/Footer';
 import { GetData } from '../../Utils/GetData';
 import axios from 'axios';
 import Alerts from '../../Utils/Alerts/Alerts';
+import { Button } from '../../Components/Button';
+import { ModalContext } from '../../Contexts/ModalContext/ModalContext';
 
 const User = () => {
+  const {modal, setModal} = useContext(ModalContext);
   const url = new URL(document.location.toString()).searchParams;
   const [activationError, setActivationError] = useState(0);
   if (url.has("activate")) {
@@ -44,21 +47,23 @@ const User = () => {
     {activationError === 1 ?
     <Alerts type="success" message="Account activated!" />
     : undefined}
-      <div className="About-page">
+      <div className="wrapper wrapperPadding">
       <ContentBlock>
           {user ? 
-          <>
-            <Title>{user['name']}</Title>
-            <button onClick={() => logout()}>Log Out</button>
-          </>
+          <div className='userLogged'>
+            <div className='userWrapper'>
+              <div className='userAvatar' style={{backgroundColor: `${user['avatarColor']}88`}}>{user['avatarIcon']}</div>
+              <Subtitle>{user['name']}</Subtitle>
+              <button className='userLogout' onClick={() => logout()}></button>
+            </div>
+          </div>
           : 
-          <>
-            <Title>Тестування авторизації</Title><br/>
+          <div className='userNotLogged'>
             <Subtitle>
-              Спробуйте залогінитись за допомогою форми нижче:
-            </Subtitle><br/>
-            <LoginForm />
-          </>
+              👋 Hi! You need to sign in to see this page.<br/>
+            </Subtitle>
+            <button onClick={() => setModal(true)}>Want to sign in?</button>
+          </div>
           }
         </ContentBlock>
       </div>

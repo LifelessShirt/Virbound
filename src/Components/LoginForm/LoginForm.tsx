@@ -65,7 +65,7 @@ const LoginForm = () => {
       <Alerts type="success" message={error} />
     })
     :
-    setResponseStatus(<Alerts type="su" message="Passwords do not match!" />);
+    setResponseStatus(<Alerts type="warning" message="Passwords do not match!" />);
   }
   
   useEffect(() => {
@@ -78,27 +78,36 @@ const LoginForm = () => {
   return (
     !regForm ?
     <>
+    {responseStatus}
     <form method="post" onSubmit={authSubmit} className={Style.form}>
       <input type="text" name='email' value={email} onChange={e => setEmail(e.target.value)} placeholder='EMail' required/>
-      <input type={passwordInput} name='password' value={password} onChange={e => setPassword(e.target.value)} placeholder='Пароль' required/>
-      <button type="button" onClick={() => passwordInput === 'password'?setPasswordInput('text'):setPasswordInput('password')}>👁️</button>
+      <div className={Style.passwordForm}>
+      <input type={passwordInput} name='password' value={password} onChange={e => setPassword(e.target.value)} placeholder='Password' required/>
+      <div className={`${Style.passwordHidder} ${Style[passwordInput]}`} onClick={() => passwordInput === 'password'?setPasswordInput('text'):setPasswordInput('password')}></div>
+      </div>
       <button type="submit">Sign in</button>
     </form>
     <div className={Style.hr}></div>
+    <button className={Style.register} onClick={() => setRegForm(true)}>Create new account</button>
     <GoogleLoginForm setResponseStatus={setResponseStatus} />
-    <button onClick={() => setRegForm(true)}>New to Virbound? Join now</button>
-    {responseStatus}
     </>
     :
     <>
+    {responseStatus}
     <form method="post" onSubmit={regSubmit} className={Style.form}>
       <input type="text" name='email' value={email} onChange={e => setEmail(e.target.value)} placeholder='EMail' required/>
-      <input type={passwordInput} name='password' value={password} onChange={e => setPassword(e.target.value)} placeholder='Пароль' required/>
-      <input type={passwordInput} name='password2' value={password2} onChange={e => setPassword2(e.target.value)} placeholder='Пароль' required/>
-      <button type="button" onClick={() => passwordInput === 'password'?setPasswordInput('text'):setPasswordInput('password')}>👁️</button>
+      <div className={Style.passwordForm}>
+      <input type={passwordInput} name='password' value={password} onChange={e => setPassword(e.target.value)} placeholder='Password' required/>
+      <div className={`${Style.passwordHidder} ${Style[passwordInput]}`} onClick={() => passwordInput === 'password'?setPasswordInput('text'):setPasswordInput('password')}></div>
+      </div>
+      <div className={Style.passwordForm}>
+      <input type={passwordInput} name='password2' value={password2} onChange={e => setPassword2(e.target.value)} placeholder='Repeat password' required/>
+      <div className={`${Style.passwordHidder} ${Style[passwordInput]}`} onClick={() => passwordInput === 'password'?setPasswordInput('text'):setPasswordInput('password')}></div>
+      </div>
       <button type="submit">Register</button>
     </form>
-    {responseStatus}
+    <div className={Style.hr}></div>
+    <button className={Style.register} onClick={() => setRegForm(false)}>Back to sign in</button>
     </>
     
   );

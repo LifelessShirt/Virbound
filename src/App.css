@@ -1,19 +1,25 @@
 :root {
-    --accent-color: #a6eac9;
-    --accent-color-half-transparent: #a6eac988;
-    --accent-color-2: #7abc86;
-    --accent-color-2-half-transparent: #7abc8688;
-    --main-color: #304439;
-    --main-color-half-transparent: #30443988;
-    --main-color-button-transparent: #30443933;
-    --main-color-2: #3e6a5a;
-    --main-color-2-half-transparent: #415c4d88;
-    --white-color: #f2f2f2;
-    --white-color-half-transparent: #f2f2f288;
-    --gray-color: #EBEBEB;
-    --gray-color-half-transparent: #EBEBEB88;
-    --dark-color: #444444;
-    --dark-color-half-transparent: #44444488;
+    /*
+    Color codes.
+    Where "ht" at end, it means half-transparent.
+    */
+    --accent: #53d096;
+    --accent-ht: #53d09688;
+    --accent-dark: #2c6c4e;
+    --accent-dark-ht: #30443988;
+    --white: #f2f2f2;
+    --white-nt: #f2f2f2dd;
+    --white-ht: #f2f2f288;
+    --gray: #EBEBEB;
+    --gray-ht: #EBEBEB88;
+    --gray-2: #DEDEDE;
+    --gray-2-ht: #DEDEDE88;
+    --gray-3: #BBBBBB;
+    --gray-3-ht: #BBBBBB88;
+    --dark: #444444;
+    --dark-ht: #44444488;
+    --black: #111111;
+    --black-ht: #11111188;
 }
 @font-face {
   font-family: Main;
@@ -36,30 +42,31 @@
     background: #B3B3B3; 
 }
 ::-webkit-scrollbar-thumb {
-  background-color: #808080;
+  background: #808080;
 	width: 10px;
 	margin: 0 auto;
   border-radius: 50px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background-color: #636363;
+  background: #636363;
 }
 
 body {
   font-family: Main, sans-serif;
   text-align: center;
-  background-color: var(--dark-color);
-  color: var(--main-color);
+  background: var(--dark);
+  color: var(--main);
   margin: 0;
   padding: 0;
 }
 
 a {
-  color: var(--main-color);
+  color: var(--accent-dark);
   text-decoration: none;
+  -webkit-tap-highlight-color: transparent;
 }
 a:hover {
-  color: var(--main-color-2);
+  color: var(--accent-dark);
 }
 
 .Main {
@@ -81,69 +88,33 @@ a:hover {
 }
 
 .MainHome {
-  background: var(--dark-color);
+  background: var(--dark);
 }
 .MainMinebound {
-  background: var(--dark-color);
+  background: var(--dark);
 }
 .MainAbout {
-  background: var(--gray-color);
+  background: var(--gray);
 }
 
-.Home-page {
-  background: var(--accent-color);
+.wrapper {
+  background: var(--gray);
   margin: 0;
-  padding: 0;
+  padding: 0px 0px 0px 0px;
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  border-radius: 0px 0px 15px 15px;
+}
+.wrapper.wrapperPadding {
+  padding: 64px 0px 0px 0px;
+}
+.w-home {
   border-radius: 0px;
 }
 
-.Minebound-page {
-  background: var(--accent-color-2);
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  border-radius: 0px 0px 15px 15px;
-}
-.minebound-logo {
-  position: relative;
-  display: inline-block;
-  width: 128px;
-  height: 128px;
-  -webkit-mask-image: url(Media/minebound.mask.png);
-  mask-image: url(Media/minebound.mask.png);
-  -webkit-mask-size: cover;
-  mask-size: cover;
-  background: #30443a;
-}
-.minebound-logo::after {
-  content: '';
-  position: absolute; top: 0; left: 0;
-  width: 100%; height: 100%;
-  background: center / cover no-repeat url(Media/minebound.animation.jpg);
-  animation: mb-logo 10s linear infinite;
-}
-@keyframes mb-logo {from {transform: rotate(0deg);} to {transform: rotate(360deg);}}
-
-.About-page {
-  background: var(--gray-color);
-  margin: 0;
-  padding: 64px 0px 0px 0px;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  border-radius: 0px 0px 15px 15px;
-}
 
 .Title {
   font-family: Title, sans-serif;
@@ -153,6 +124,7 @@ a:hover {
   font-family: Title, sans-serif;
   font-size: 1.5rem;
   opacity: 0.75;
+  text-align: justify;
 }
 .Home-page .Subtitle {
   margin: 20px 0px;
@@ -164,7 +136,7 @@ a:hover {
   margin: 12px;
   padding: 60px 60px;
   border-radius: 30px;
-  background: var(--white-color);
+  background: var(--white);
   width: calc(100% - 144px);
   max-width: 776px;
   text-align: left;
@@ -172,15 +144,61 @@ a:hover {
 
 .fullSizeBlock {
   position: relative;
-  display: block;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  vertical-align: middle;
+  justify-content: center;
+  flex-wrap: nowrap;
   margin: 0; padding: 0;
   width: 100%;
   height: 100vh;
+  max-width: 1280px;
 }
-.fullSizeBlockInner {
+.fullSizeBlockInnerText {
+  position: relative;
+  padding: 20px;
+  flex-basis: 60%;
+}
+.fullSizeBlockInnerImage {
+  position: relative;
+  width: 640px;
+  flex-basis: 20%;
+}
+.fullSizeBlockInnerImage .image {
+  position: relative;
+  background: center/cover no-repeat url(/src/Media/gamepad-3d.png);
+  width: 256px;
+  height: 256px;
+  margin: 0 auto;
+  animation: gamepad 10s ease-in-out infinite;
+  -webkit-animation: gamepad 10s ease-in-out infinite;
+  -moz-animation: gamepad 10s ease-in-out infinite;
+}
+.fullSizeBlockInnerImage .image-shadow {
+  display: block;
   position: absolute;
-  top: 50%; left: 50%;
-  transform: translateX(-50%) translateY(-50%);
+  content: "";
+  bottom: 0; left: 50%;
+  transform: translateX(-50%);
+  width: 150px;
+  height: 0px;
+  border-radius: 50%;
+  background: #000000;
+  box-shadow: 0 0 100px 30px #000000;
+  animation: gamepad-shadow 10s ease-in-out infinite;
+  -webkit-animation: gamepad-shadow 10s ease-in-out infinite;
+  -moz-animation: gamepad-shadow 10s ease-in-out infinite;
+}
+@keyframes gamepad {
+  0% {top: -25px;} 50% {top: 25px} 100% {top: -25px}
+}
+@keyframes gamepad-shadow {
+  0% {width: 150px; opacity: 0.4;} 50% {width: 170px; opacity: 0.75;} 100% {width: 150px; opacity: 0.4;}
+}
+
+.fullSizeBlockMinebound {
+  padding: 20px;
 }
 
 #twitch-embed {
@@ -190,10 +208,77 @@ a:hover {
   overflow: hidden;
 }
 
+.minebound-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: blur(5px);
+  opacity: 0.5;
+}
+.minebound-video-hover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 102%;
+  width: 100%;
+  background: linear-gradient(0deg, var(--gray) 0%, rgba(235,235,235,0) 50%);
+}
+
+.userNotLogged {
+  position: relative;
+  text-align: center;
+}
+.userNotLogged .Subtitle {
+  text-align: center;
+}
+.userNotLogged button {
+  border-radius: 10px;
+  padding: 12px 16px;
+  background-color: var(--gray-2);
+  color: var(--dark);
+}
+
+.userWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  gap: 12px;
+}
+.userAvatar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background: var(--gray);
+  border-radius: 10px;
+  flex-basis: 40px;
+}
+.userWrapper .Subtitle {
+  flex-basis: calc(100% - 100px);
+  overflow: hidden;
+}
+
+button.userLogout {
+  position: absolute;
+  top: 55px; right: 55px;
+  width: 40px;
+  height: 40px;
+  background: center / 24px no-repeat url(./Media/logout.svg);
+  background-color: var(--gray-2);
+  border-radius: 10px;
+  flex-basis: 40px;
+
+}
+
+
 .Footer {
   padding: 10px;
-  background: var(--dark-color);
-  color: var(--white-color-half-transparent);
+  background: var(--dark);
+  color: var(--white-ht);
 }
-.Footer a {color: var(--white-color);}
+.Footer a {color: var(--white);}
 .Footer a:hover {text-decoration: underline;}

@@ -1,19 +1,21 @@
-import React, { useState } from 'react';
+import React, { createContext, useState } from 'react';
 import './App.css';
 import './App.mobile.css';
-import { Routes, Route, useLocation } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 
 import Menu from './Components/Menu/Menu';
 import Home from './Pages/Home/Home';
 import Minebound from './Pages/Minebound/Minebound';
 import About from './Pages/About/About';
 import User from './Pages/User/User';
-import Alerts from './Utils/Alerts/Alerts';
+import ModalProvider from './Contexts/ModalContext/ModalContext';
+import Modal from './Components/Modal/Modal';
 
 const App = () => {
-  var pathname = useLocation().pathname;
   return (<>
-    <Menu currentPath={pathname}/>
+    <ModalProvider>
+    <Modal/>
+    <Menu/>
     <div className={`Main`}>
     <Routes>
       <Route path="/" element={<Home />} />
@@ -22,6 +24,7 @@ const App = () => {
       <Route path="/user" element={<User />} />
     </Routes>
     </div>
+    </ModalProvider>
   </>);
 }
 
