@@ -1,26 +1,25 @@
 :root {
-    /*
-    Color codes.
-    Where "ht" at end, it means half-transparent.
-    */
-    --accent: #53d096;
-    --accent-ht: #53d09688;
-    --accent-dark: #2c6c4e;
-    --accent-dark-ht: #30443988;
-    --white: #f2f2f2;
-    --white-nt: #f2f2f2dd;
-    --white-ht: #f2f2f288;
-    --gray: #EBEBEB;
-    --gray-ht: #EBEBEB88;
-    --gray-2: #DEDEDE;
-    --gray-2-ht: #DEDEDE88;
-    --gray-3: #BBBBBB;
-    --gray-3-ht: #BBBBBB88;
-    --dark: #444444;
-    --dark-ht: #44444488;
-    --black: #111111;
-    --black-ht: #11111188;
+  --accent: #53d096;
+  --accent-ht: #53d09688;
+  --accent-dark: #2c6c4e;
+  --accent-dark-ht: #30443988;
+  --white: #f2f2f2;
+  --white-nt: #f2f2f2dd;
+  --white-ht: #f2f2f288;
+  --gray: #EBEBEB;
+  --gray-ht: #EBEBEB88;
+  --gray-2: #DEDEDE;
+  --gray-2-ht: #DEDEDE88;
+  --gray-3: #BBBBBB;
+  --gray-3-ht: #BBBBBB88;
+  --gray-4: #AAAAAA;
+  --gray-4-ht: #AAAAAA88;
+  --dark: #444444;
+  --dark-ht: #44444488;
+  --black: #111111;
+  --black-ht: #11111188;
 }
+
 @font-face {
   font-family: Main;
   src: url(Media/Rubik.ttf) format("opentype");
@@ -39,10 +38,10 @@
 	display: none;
 }
 ::-webkit-scrollbar-track {
-    background: #B3B3B3; 
+    background: var(--gray-2); 
 }
 ::-webkit-scrollbar-thumb {
-  background: #808080;
+  background: var(--gray-4);
 	width: 10px;
 	margin: 0 auto;
   border-radius: 50px;
@@ -54,7 +53,7 @@
 body {
   font-family: Main, sans-serif;
   text-align: center;
-  background: var(--dark);
+  background: var(--gray);
   color: var(--main);
   margin: 0;
   padding: 0;
@@ -79,23 +78,6 @@ a:hover {
   z-index: 2;
   transition: all 0.5s;
 }
-.Main-opened {
-  transform: scale(0.9);
-  box-shadow: -20px 0px 20px 0px #00000033;
-  left: 75%;
-  border-radius: 30px;
-  overflow-y: hidden;
-}
-
-.MainHome {
-  background: var(--dark);
-}
-.MainMinebound {
-  background: var(--dark);
-}
-.MainAbout {
-  background: var(--gray);
-}
 
 .wrapper {
   background: var(--gray);
@@ -108,13 +90,12 @@ a:hover {
   justify-content: center;
   border-radius: 0px 0px 15px 15px;
 }
-.wrapper.wrapperPadding {
+.wrapperPadding {
   padding: 64px 0px 0px 0px;
 }
-.w-home {
+.wrapperNoBorderRadius {
   border-radius: 0px;
 }
-
 
 .Title {
   font-family: Title, sans-serif;
@@ -134,7 +115,7 @@ a:hover {
   position: relative;
   display: inline;
   margin: 12px;
-  padding: 60px 60px;
+  padding: 50px;
   border-radius: 30px;
   background: var(--white);
   width: calc(100% - 144px);
@@ -227,58 +208,12 @@ a:hover {
   background: linear-gradient(0deg, var(--gray) 0%, rgba(235,235,235,0) 50%);
 }
 
-.userNotLogged {
-  position: relative;
-  text-align: center;
-}
-.userNotLogged .Subtitle {
-  text-align: center;
-}
-.userNotLogged button {
-  border-radius: 10px;
-  padding: 12px 16px;
-  background-color: var(--gray-2);
-  color: var(--dark);
-}
-
-.userWrapper {
-  display: flex;
-  align-items: center;
-  justify-content: left;
-  gap: 12px;
-}
-.userAvatar {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 40px;
-  height: 40px;
-  background: var(--gray);
-  border-radius: 10px;
-  flex-basis: 40px;
-}
-.userWrapper .Subtitle {
-  flex-basis: calc(100% - 100px);
-  overflow: hidden;
-}
-
-button.userLogout {
-  position: absolute;
-  top: 55px; right: 55px;
-  width: 40px;
-  height: 40px;
-  background: center / 24px no-repeat url(./Media/logout.svg);
-  background-color: var(--gray-2);
-  border-radius: 10px;
-  flex-basis: 40px;
-
-}
-
-
 .Footer {
+  position: relative;
   padding: 10px;
-  background: var(--dark);
-  color: var(--white-ht);
+  background: var(--gray);
+  color: var(--dark-ht);
+  z-index: -1;
 }
-.Footer a {color: var(--white);}
+.Footer a {color: var(--dark);}
 .Footer a:hover {text-decoration: underline;}

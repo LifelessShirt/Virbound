@@ -1,0 +1,32 @@
+.badge {
+    display: inline-block;
+    width: 64px; height: 64px;
+    margin: 6px;
+    background-color: var(--gray-2-ht);
+    border-radius: 8px;
+    --base-bg: center / 48px no-repeat;
+}
+
+.mini {
+    display: inline-block;
+    vertical-align: middle;
+    width: 48px; height: 48px;
+    --base-bg: center / 40px no-repeat;
+}
+
+.badge-Hawkeye {
+    background: var(--base-bg) url(../../Media/Badges/Hawkeye.png);
+    background-color: var(--gray-2-ht);
+}
+.badge-Explorer {
+    background: var(--base-bg)  url(../../Media/Badges/Explorer.png);
+    background-color: var(--gray-2-ht);
+}
+.badge-Dragonborn {
+    background: var(--base-bg)  url(../../Media/Badges/Dragonborn.png);
+    background-color: var(--gray-2-ht);
+}
+.badge-Fighter {
+    background: var(--base-bg)  url(../../Media/Badges/Fighter.png);
+    background-color: var(--gray-2-ht);
+}

@@ -20,13 +20,13 @@ const Menu = () => {
                 <div className={Style.menu_block_logo}></div>
             </Link>
             <Link to="/">
-                <div className={Style.menu_block} onClick={menuChangeStatus}>Home</div>
+                <div className={Style.menu_block} onClick={() => setMenuStatus('closed')}>Home</div>
             </Link>
             <Link to="/minebound">
-                <div className={Style.menu_block} onClick={menuChangeStatus}>MineBound</div>
+                <div className={Style.menu_block} onClick={() => setMenuStatus('closed')}>MineBound</div>
             </Link>
             <Link to="/about">
-                <div className={Style.menu_block} onClick={menuChangeStatus}>About</div>
+                <div className={Style.menu_block} onClick={() => setMenuStatus('closed')}>About</div>
             </Link>
             {user ?
                 <Link to="/user">

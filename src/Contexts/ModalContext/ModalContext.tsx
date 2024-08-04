@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { createContext } from "vm";
 
 interface ModalContextProps { modal:boolean, setModal:React.Dispatch<React.SetStateAction<boolean>> }
 export const ModalContext = React.createContext({} as ModalContextProps);

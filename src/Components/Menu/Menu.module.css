@@ -127,7 +127,7 @@ a {
     left: 50%;
     transform: translateX(-50%);
     background: center / 28px no-repeat url(../../Media/logo-accent-dark.svg);
-    background-color: var(--gray-3-ht);
+    background-color: var(--gray-ht);
   }
   .menu_block_right {
     font-family: Title, sans-serif;

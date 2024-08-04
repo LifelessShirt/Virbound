@@ -59,12 +59,6 @@
     text-align: left;
   }
 
-  button.userLogout {
-    position: absolute;
-    top: 35px; right: 30px;
-  
-  }
-
   #twitch-embed {
     height: 180px;
     width: 100%;

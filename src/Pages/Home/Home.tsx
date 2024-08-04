@@ -11,7 +11,7 @@ function Home() {
   //
   // And replace text on {t('code')}
   return ( <>
-    <div className="wrapper w-home">
+    <div className="wrapper wrapperNoBorderRadius">
       <div className="fullSizeBlock">
 		<div className="fullSizeBlockInnerText">
         <Title>Welcome to Virbound</Title>
