@@ -25,6 +25,9 @@ const Menu = () => {
             <Link to="/minebound">
                 <div className={Style.menu_block} onClick={() => setMenuStatus('closed')}>MineBound</div>
             </Link>
+            <Link to="/wiki">
+                <div className={Style.menu_block} onClick={() => setMenuStatus('closed')}>Wiki</div>
+            </Link>
             <Link to="/about">
                 <div className={Style.menu_block} onClick={() => setMenuStatus('closed')}>About</div>
             </Link>

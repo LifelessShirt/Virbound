@@ -10,6 +10,7 @@ import About from './Pages/About/About';
 import User from './Pages/User/User';
 import ModalProvider from './Contexts/ModalContext/ModalContext';
 import Modal from './Components/Modal/Modal';
+import Wiki from './Pages/Wiki/Wiki';
 
 const App = () => {
   return (<>
@@ -22,6 +23,7 @@ const App = () => {
       <Route path="/minebound" element={<Minebound />} />
       <Route path="/about" element={<About />} />
       <Route path="/user" element={<User />} />
+      <Route path="/wiki" element={<Wiki />} />
     </Routes>
     </div>
     </ModalProvider>

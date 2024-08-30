@@ -4,7 +4,7 @@ import { Title } from "../../Components/Title";
 import { Button } from "../../Components/Button";
 import Badge from "../../Components/Badge/Badge";
 
-export const AboutContent = [
+export const WikiContent = [
         {id:'0', button: "About", content:
         <>
         <Title>🤔 What the <b>Virbound</b>?</Title><br/>
@@ -17,6 +17,18 @@ export const AboutContent = [
         <Subtitle>
         By the way: Virbound is a combination of the words Virtual and Bound, 
         which can be translated as “virtually connected”.
+        </Subtitle>
+        <a href="about?navTo=3"><Button>Read more about our guilds</Button></a>
+        <a href="minebound"><Button>Our Minecraft server</Button></a>
+        </>
+        },
+
+        {id:'3', button: "Guilds", content:
+        <>
+        <Title>🏰 <b>Guilds</b> and <b>clans</b></Title><br/>
+        <Subtitle>
+        For now we have only one guild in game we play a most.<br/>
+        And it's <b>The Elder Scrolls: Online</b>.
         </Subtitle>
         </>
         },
