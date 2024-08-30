@@ -62,7 +62,7 @@ const User = () => {
                 :
                   <>
                   <Subtitle>You have not earned any badges yet</Subtitle>
-                  <a href='/about?navTo=1'><Button>How to earn?</Button></a>
+                  <a href='/wiki?navTo=1'><Button>How to earn?</Button></a>
                   </>
                 }
               </div>
