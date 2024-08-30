@@ -18,7 +18,7 @@ function Minebound() {
         A server that allows you to unleash your creative potential
         </Subtitle><br />
         <Button type='focus' customOnClick='copyIP'>Copy IP</Button><br />
-        Version 1.20.1 • License is not required
+        Version 1.21 • License is required
       </div></div>
       <ContentBlock>
         <Title>🌶️ Spicy vanilla experience</Title><br/>
