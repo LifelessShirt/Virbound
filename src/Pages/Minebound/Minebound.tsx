@@ -4,6 +4,7 @@ import { Title } from '../../Components/Title';
 import { Subtitle } from '../../Components/Subtitle';
 import { Footer } from '../../Components/Footer';
 import { Button } from '../../Components/Button';
+import { IQ } from '../../Components/InlineQuote/InlineQuote';
 
 function Minebound() {
   return ( <>
@@ -40,7 +41,7 @@ function Minebound() {
         <Title>🤔 How to play</Title><br/>
         <Subtitle>
         It's not hard, just download our build, extract it in this path:<br/>
-        <p style={{background: "var(--dark-ht)", display: "inline", padding: "5px", borderRadius: "5px"}}>%APPDATA%/.minecraft/mods</p><br/>
+        <IQ>%APPDATA%/.minecraft/mods</IQ><br/>
         Install latest Fabric 1.20.2 and run it. That's all!<br/>
         </Subtitle><br/>
         <a href='https://virbound.com/media/minebound-mods-latest.zip' target='_download'><Button>Download build</Button></a>

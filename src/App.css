@@ -68,6 +68,10 @@ a:hover {
   color: var(--accent-dark);
 }
 
+ul {
+  margin: 6px 0 0 0;
+}
+
 .Main {
   margin: 0; padding: 0px;
   position: fixed;
@@ -217,3 +221,11 @@ a:hover {
 }
 .Footer a {color: var(--dark);}
 .Footer a:hover {text-decoration: underline;}
+
+/* MISC */
+.logo-flag {
+  display: inline-block;
+  vertical-align: middle;
+  width: 1em; height: 1em;
+  background: center / 0.8em no-repeat url(./Media/logo-flag.png);
+}

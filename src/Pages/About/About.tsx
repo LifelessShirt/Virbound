@@ -1,5 +1,6 @@
 import { Button } from '../../Components/Button';
 import { ContentBlock } from '../../Components/ContentBlock';
+import { Footer } from '../../Components/Footer';
 import { Subtitle } from '../../Components/Subtitle';
 import { Title } from '../../Components/Title';
 
@@ -27,12 +28,13 @@ const About = () => {
         <Title>🏰 Guilds and clans</Title><br/>
         <Subtitle>
           Currently we have only one guild in <b>The Elder Scrolls: Online</b>.<br />
-          Also you can create your own guilds and clans named <b>Virbound</b> in other games. Just notify admins at our <a href="https://discord.gg/rMhqK6BrBZ" target='_blank'>Discord</a> about it.
+          You can create your own guilds and clans named <b>Virbound</b> and join to our community as Guildmaster.
         </Subtitle>
         <br />
         <a href="wiki?navTo=3"><Button>Read more about it</Button></a>
       </ContentBlock>
     </div>
+    <Footer />
     </>
   );
 }
