@@ -11,7 +11,7 @@ const Wiki = () => {
   const navTo = Number(url.get('navTo')) || undefined;
 
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const arr:{id:string, button:string, content:JSX.Element}[] = WikiContent;
+  const arr:{id:string, sub:boolean, button:string, content:JSX.Element}[] = WikiContent;
   const [content, setContent] = useState<{id:string, button:string, content:JSX.Element} | undefined>(arr[navTo ? navTo : 0]);
 
   useEffect(() => {
@@ -27,7 +27,7 @@ const Wiki = () => {
     <NavigationPage>
       <NavigationMenu>
         {arr.map(item => (
-          <button className={` ${Style.button} ${content?.id === item.id && Style.selectedNavMenu}`} onClick={() => showClick(item.id)}>{item.button}</button>
+          <button className={` ${Style.button} ${item.sub ? Style.button_sub : ``} ${content?.id === item.id && Style.selectedNavMenu}`} onClick={() => showClick(item.id)}>{item.button}</button>
         ))}
       </NavigationMenu>
       <NavigationContent state={mobileMenuOpen}>
