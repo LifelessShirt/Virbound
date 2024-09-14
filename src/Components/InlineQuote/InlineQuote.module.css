@@ -1,0 +1,6 @@
+.quote {
+    background: var(--gray-3-ht);
+    display: inline;
+    padding: 0 5px;
+    border-radius: 5px;
+}

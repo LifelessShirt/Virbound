@@ -32,24 +32,41 @@
 }
 
 .button {
-    background: transparent;
+    position: relative;
+    background-color: transparent;
     display: block;
     width: 100%;
-    margin: 0;
+    margin: 0 0 6px 0;
     border-radius: 12px 0 0 12px;
     text-align: left;
+    font-weight: 700;
 }
 .button:hover {
-    background: var(--gray-2-ht);
+    background-color: var(--gray-2);
 }
 .selectedNavMenu {
-    background: var(--accent-ht);
+    background-color: var(--gray-2-ht);
 }
 .selectedNavMenu:hover {
-    background: var(--accent);
+    background-color: var(--gray-2);
 }
 .mobileOpener {
     display: none;
+}
+.button_sub {
+    position: relative;
+    width: calc(100% - 48px);
+    left: 48px;
+    font-weight: 400;
+}
+.button_sub::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: -32px;
+    transform: translateY(-50%);
+    width: 24px; height: 24px;
+    background: center / 24px url(../../Media/button_sub_menu.svg) no-repeat;
 }
 
 

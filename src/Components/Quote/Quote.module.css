@@ -1,0 +1,6 @@
+.quote {
+    padding: 20px;
+    background: var(--gray-2-ht);
+    border: 1px solid var(--gray-3-ht);
+    border-radius: 12px;
+}
