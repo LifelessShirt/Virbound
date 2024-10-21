@@ -29,6 +29,21 @@ export const WikiContent = [
         </>
         },
         /////////////////////////////////////////////////////////////
+        {id:'7', sub: false, button: "About", content:
+        <>
+        <Title>
+          🤔 What the <b>Virbound</b>?
+        </Title><br/>
+        <Subtitle>
+          Virbound is a community of creative and interesting people. <br/>
+          We like to play games together, watch various YouTube videos, stream our suffering in souls-like games, 
+          do hard tearing with Linux kernel recompilation, and much more.<br/>
+          <br/>
+          In short, we are the funniest and coolest group of friends.
+        </Subtitle>
+        </>
+        },
+        /////////////////////////////////////////////////////////////
         {id:'6', sub: false, button: "Events", content:
         <>
         <Title>
@@ -80,28 +95,6 @@ export const WikiContent = [
         </>
         },
         /////////////////////////////////////////////////////////////
-        {id:'2', sub: false, button: "Livestreams", content:
-        <>
-        <Title>
-          🎭 Our streams
-        </Title><br/>
-        <Subtitle>
-          As was mentioned before, sometimes we do livestreams.<br/>
-          Here is our channel:
-        </Subtitle>
-        <TwitchEmbed
-          channel="LifelessShirt"
-          darkMode={false}
-          onAuthenticate={function noRefCheck(){}}
-          onVideoPause={function noRefCheck(){}}
-          onVideoPlay={function noRefCheck(){}}
-          onVideoReady={function noRefCheck(){}}
-          withChat={false}
-          height={""}
-          width={""}
-        />
-        </>
-        },
         {id:'3', sub: false, button: "Guilds", content:
         <>
         <Title>
@@ -148,6 +141,29 @@ export const WikiContent = [
         </Subtitle>
         </>
         },
+        /////////////////////////////////////////////////////////////
+        // {id:'2', sub: false, button: "Livestreams", content:
+        // <>
+        // <Title>
+        //   🎭 Our streams
+        // </Title><br/>
+        // <Subtitle>
+        //   As was mentioned before, sometimes we do livestreams.<br/>
+        //   Here is our channel:
+        // </Subtitle>
+        // <TwitchEmbed
+        //   channel="LifelessShirt"
+        //   darkMode={false}
+        //   onAuthenticate={function noRefCheck(){}}
+        //   onVideoPause={function noRefCheck(){}}
+        //   onVideoPlay={function noRefCheck(){}}
+        //   onVideoReady={function noRefCheck(){}}
+        //   withChat={false}
+        //   height={""}
+        //   width={""}
+        // />
+        // </>
+        // },
         /////////////////////////////////////////////////////////////
         {id:'99', sub: false, button: "Rules", content:
         <>
