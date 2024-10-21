@@ -38,10 +38,12 @@
   flex-basis: 40px;
 }
 .userNameWrapper .Subtitle {
-  flex-basis: calc(100% - 100px);
+  /* flex-basis: calc(100% - 100px); */
+  flex-basis: 100%;
   overflow: hidden;
 }
-button.userLogout {
+/* button.userLogout {
+  display: none;
   position: absolute;
   top: 40px; right: 45px;
   width: 40px;
@@ -50,6 +52,18 @@ button.userLogout {
   background-color: var(--gray-2);
   border-radius: 10px;
   flex-basis: 40px;
+} */
+button.userLogout2 {
+  display: inline-block;
+  width: 36px;
+  height: 36px;
+  background: center / 20px no-repeat url(../../Media/logout.svg);
+  background-color: var(--gray-2-ht);
+  border-radius: 10px;
+  flex-basis: 40px;
+}
+button.userLogout2:hover {
+  background-color: var(--gray-2);
 }
 
 .userContentWrapper {
@@ -59,6 +73,8 @@ button.userLogout {
   justify-content: center;
   gap: 20px;
   margin-top: 20px;
+  margin-bottom: 20px;
+  width: calc(100% - 4px);
 }
 .userContentBlock {
   display: flex;
@@ -84,8 +100,9 @@ button.userLogout {
   .userContentBlock {
     flex-basis: 100%;
   }
-  button.userLogout {
+  /* button.userLogout {
+    display: block;
     position: absolute;
     top: 35px; right: 30px;
-  }
+  } */
 }
