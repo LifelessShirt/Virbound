@@ -21,6 +21,9 @@
 .ButtonFocus:hover {
     background: var(--accent);
 }
+.ButtonInline {
+  display: inline-block;
+}
 .ButtonTransparent {
   background: transparent;
 }
@@ -29,5 +32,9 @@
   .Button {
     display: block;
     width: calc(100% - 12px);
+  }
+  .ButtonInline {
+    display: inline-block;
+    width: auto;
   }
 }
