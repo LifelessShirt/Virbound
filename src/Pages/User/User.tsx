@@ -46,12 +46,12 @@ const User = () => {
     : undefined}
       <div className="wrapper wrapperPadding">
       <ContentBlock>
-          {user ? 
+          {user ? // See this if user is logged in
           <div className='userLogged'>
             <div className='userNameWrapper'>
               <div className='userAvatar' style={{backgroundColor: `${user['avatarColor']}88`}}>{user['avatarIcon']}</div>
               <Subtitle>{user['name']}</Subtitle>
-              <button className='userLogout' onClick={() => logout()}></button>
+              {/* <button className='userLogout' onClick={() => logout()}></button> */}
             </div>
             <div className='userContentWrapper'>
               <div className='userContentBlock' style={{flexDirection: "row", flexWrap: "wrap"}}>
@@ -70,8 +70,10 @@ const User = () => {
                 <Subtitle>MineBound account is not linked</Subtitle>
               </div>
             </div>
+            <Button type='inline'>Settings</Button>
+            <button className='userLogout2' onClick={() => logout()}></button>
           </div>
-          : 
+          : // See this if user is NOT logged in
           <div className='userNotLogged'>
             <Subtitle>
               👋 Hi! You need to sign in to see this page.<br/>
