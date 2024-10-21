@@ -80,6 +80,7 @@ const LoginForm = () => {
     <>
     {responseStatus}
     <form method="post" onSubmit={authSubmit} className={Style.form}>
+      <div className={Style.title}>Sign in</div>
       <input type="text" name='email' value={email} onChange={e => setEmail(e.target.value)} placeholder='EMail' required/>
       <div className={Style.passwordForm}>
       <input type={passwordInput} name='password' value={password} onChange={e => setPassword(e.target.value)} placeholder='Password' required/>
@@ -95,6 +96,7 @@ const LoginForm = () => {
     <>
     {responseStatus}
     <form method="post" onSubmit={regSubmit} className={Style.form}>
+      <div className={Style.title}>Create your new account</div>
       <input type="text" name='email' value={email} onChange={e => setEmail(e.target.value)} placeholder='EMail' required/>
       <div className={Style.passwordForm}>
       <input type={passwordInput} name='password' value={password} onChange={e => setPassword(e.target.value)} placeholder='Password' required/>
