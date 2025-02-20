@@ -68,6 +68,7 @@ const User = () => {
               </div>
               <div className='userContentBlock'>
                 <Subtitle>MineBound account is not linked</Subtitle>
+                <a><Button>Link</Button></a>
               </div>
             </div>
             <Button type='inline'>Settings</Button>

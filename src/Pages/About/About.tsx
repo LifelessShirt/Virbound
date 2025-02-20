@@ -9,12 +9,6 @@ const About = () => {
     <>
     <div className="wrapper wrapperPadding">
       <ContentBlock>
-        <Title>Greg, change this block, add some styles</Title>
-        <Subtitle>😊 Our socials</Subtitle><br/>
-        <a><Button>Discord</Button></a>
-        <a><Button>Telegram</Button></a>
-      </ContentBlock>
-      <ContentBlock>
         <Title>🤔 What the <b>Virbound</b>?</Title><br/>
         <Subtitle>
         Virbound is a community of creative and interesting people. <br/>
@@ -27,11 +21,15 @@ const About = () => {
       <ContentBlock>
         <Title>🏰 Guilds and clans</Title><br/>
         <Subtitle>
-          Currently we have only one guild in <b>The Elder Scrolls: Online</b>.<br />
           You can create your own guilds and clans named <b>Virbound</b> and join to our community as Guildmaster.
         </Subtitle>
         <br />
         <a href="wiki?navTo=3"><Button>Read more about it</Button></a>
+      </ContentBlock>
+      <ContentBlock>
+        <Title>🙋‍♂️ Our socials</Title>
+        <a href="https://discord.gg/rMhqK6BrBZ" target='_blank'><Button>Discord</Button></a>
+        <a href='https://t.me/virbound' target='_blank'><Button>Telegram</Button></a>
       </ContentBlock>
     </div>
     <Footer />

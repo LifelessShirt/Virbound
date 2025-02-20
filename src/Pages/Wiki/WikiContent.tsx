@@ -29,20 +29,23 @@ export const WikiContent = [
         </>
         },
         /////////////////////////////////////////////////////////////
-        {id:'7', sub: false, button: "About", content:
-        <>
-        <Title>
-          🤔 What the <b>Virbound</b>?
-        </Title><br/>
-        <Subtitle>
-          Virbound is a community of creative and interesting people. <br/>
-          We like to play games together, watch various YouTube videos, stream our suffering in souls-like games, 
-          do hard tearing with Linux kernel recompilation, and much more.<br/>
-          <br/>
-          In short, we are the funniest and coolest group of friends.
-        </Subtitle>
-        </>
-        },
+        // {id:'7', sub: false, button: "About", content:
+        // <>
+        // <Title>
+        //   🤔 What the <b>Virbound</b>?
+        // </Title><br/>
+        // <Subtitle>
+        //   Virbound is a community of creative and interesting people. <br/>
+        //   We like to play games together, watch various YouTube videos, stream our suffering in souls-like games, 
+        //   do hard tearing with Linux kernel recompilation, and much more.<br/>
+        //   <br/>
+        //   In short, we are the funniest and coolest group of friends.<br/>
+        //   <br/>
+        //   Here is our social:<br/>
+        //   <a href="https://discord.gg/rMhqK6BrBZ" target="_blank"><IQ>Discord</IQ></a> <a href="https://t.me/virbound" target="_blank"><IQ>Telegram</IQ></a>
+        // </Subtitle>
+        // </>
+        // },
         /////////////////////////////////////////////////////////////
         {id:'6', sub: false, button: "Events", content:
         <>
@@ -76,36 +79,30 @@ export const WikiContent = [
         </>
         },
         /////////////////////////////////////////////////////////////
-        {id:'5', sub: true, button: "Minebound", content:
-        <>
-        <Title>
-          <b>Minebound badges</b>
-        </Title><br/>
-        <Subtitle>
-          By playing on our <a href="/minebound"><IQ>Minecraft server</IQ></a> you can earn these Badges:<br/><br/>
-          <Badge id="1" type="mini"/>Explorer<br/>
-          Take 20,000 steps.
-          <br/><br/>
-          <Badge id="2" type="mini" />Dragonborn<br/>
-          Slay ender dragon 10 times.
-          <br/><br/>
-          <Badge id="3" type="mini" />Fighter<br/>
-          Win a PvP fight.
-        </Subtitle>
-        </>
-        },
+        // {id:'5', sub: true, button: "Minebound", content:
+        // <>
+        // <Title>
+        //   <b>Minebound badges</b>
+        // </Title><br/>
+        // <Subtitle>
+        //   By playing on our <a href="/minebound"><IQ>Minecraft server</IQ></a> you can earn these Badges:<br/><br/>
+        //   <Badge id="1" type="mini"/>Explorer<br/>
+        //   Take 20,000 steps.
+        //   <br/><br/>
+        //   <Badge id="2" type="mini" />Dragonborn<br/>
+        //   Slay ender dragon 10 times.
+        //   <br/><br/>
+        //   <Badge id="3" type="mini" />Fighter<br/>
+        //   Win a PvP fight.
+        // </Subtitle>
+        // </>
+        // },
         /////////////////////////////////////////////////////////////
         {id:'3', sub: false, button: "Guilds", content:
         <>
         <Title>
           🏰 <b>Guilds</b> and <b>clans</b>
         </Title><br/>
-        <Subtitle>
-          For now, we have only one guild in the game we play the most.<br/>
-          <a href="/wiki?navTo=4"><Button><Subtitle>
-              <div className="logo-flag"></div> <b>The Elder Scrolls Online</b>
-          </Subtitle></Button></a>
-        </Subtitle><br />
         <Subtitle>
           You can create your own guild named <b>Virbound</b> in any other game.<br />
           Just notify our <i>Guildmaster's</i> on our <a href="https://discord.gg/rMhqK6BrBZ" target="_blank"><IQ>Discord server</IQ></a>.<br />
@@ -123,24 +120,24 @@ export const WikiContent = [
         </>
         },
         /////////////////////////////////////////////////////////////
-        {id:'4', sub: true, button: "TES: Online", content:
-        <>
-        <Title>
-          <div className="logo-flag"></div> <b>Virbound</b>
-        </Title>
-        <Subtitle>
-          The Elder Scrolls Online
-        </Subtitle><br/>
-        <Subtitle>
-          There we have a small guild with a clan-hall that has everything you need.<br/>
-          The link to the hall is in the guild description inside the game.
-        </Subtitle><br/>
-        <Subtitle>
-          The guild participates in our events.<br />
-          You can check out current and upcoming events on the <a href="/wiki?navTo=6"><IQ>events</IQ></a> page.
-        </Subtitle>
-        </>
-        },
+        // {id:'4', sub: true, button: "TES: Online", content:
+        // <>
+        // <Title>
+        //   <div className="logo-flag"></div> <b>Virbound</b>
+        // </Title>
+        // <Subtitle>
+        //   The Elder Scrolls Online
+        // </Subtitle><br/>
+        // <Subtitle>
+        //   There we have a small guild with a clan-hall that has everything you need.<br/>
+        //   The link to the hall is in the guild description inside the game.
+        // </Subtitle><br/>
+        // <Subtitle>
+        //   The guild participates in our events.<br />
+        //   You can check out current and upcoming events on the <a href="/wiki?navTo=6"><IQ>events</IQ></a> page.
+        // </Subtitle>
+        // </>
+        // },
         /////////////////////////////////////////////////////////////
         // {id:'2', sub: false, button: "Livestreams", content:
         // <>

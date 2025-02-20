@@ -19,12 +19,12 @@ function Minebound() {
         A server that allows you to unleash your creative potential
         </Subtitle><br />
         <Button type='focus' customOnClick='copyIP'>Copy IP</Button><br />
-        Version 1.21 • License is required
+        Fabric 1.20.1 • License is required
       </div></div>
       <ContentBlock>
         <Title>🌶️ Spicy vanilla experience</Title><br/>
         <Subtitle>
-          We are playing on version 1.20.2 with some ✨ magic and ⚙️ industrial mods, 
+          We are playing on version 1.20.1 with some ✨ magic and ⚙️ industrial mods, 
           that provide a new experience in-game.
         </Subtitle><br/>
         <Title>🛸 Story</Title><br/>
@@ -42,7 +42,7 @@ function Minebound() {
         <Subtitle>
         It's not hard, just download our build, extract it in this path:<br/>
         <IQ>%APPDATA%/.minecraft/mods</IQ><br/>
-        Install latest Fabric 1.20.2 and run it. That's all!<br/>
+        Then install latest Fabric 1.20.1 and run it. That's all!<br/>
         </Subtitle><br/>
         <a href='https://virbound.com/media/minebound-mods-latest.zip' target='_download'><Button>Download build</Button></a>
       </ContentBlock>
