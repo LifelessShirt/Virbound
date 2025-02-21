@@ -8,10 +8,17 @@ import Alerts from '../../Utils/Alerts/Alerts';
 import { ModalContext } from '../../Contexts/ModalContext/ModalContext';
 import { Button } from '../../Components/Button';
 import Badge from '../../Components/Badge/Badge';
+import UserProfile from './UserProfile';
+import UserSettings from './UserSettings';
 
 const User = () => {
   const {modal, setModal} = useContext(ModalContext);
   const [activationError, setActivationError] = useState(0);
+  const [openSettings, setOpenSettings] = useState(false);
+
+  // Settings states
+  const [changeUserInfoStatus, setChangeUserInfoStatus] = useState<any>(null);
+  const [userInfo, setUserInfo] = useState<{"avatarColor":String, "avatarIcon":String,"name":String}>({"avatarColor":"", "avatarIcon":"","name":""});
 
   const url = new URL(document.location.toString()).searchParams;
   if (url.has("activate")) {
@@ -32,12 +39,14 @@ const User = () => {
       });
     
   }
-  const user = GetData("https://virbound.com/system/user/user.php");
-
-  const logout = () => {
-    localStorage.removeItem("access_token");
-    window.location.reload();
+  if (url.has("tab")) {
+    switch(url.get("tab")) {
+      case "settings":
+         setTimeout(() => setOpenSettings(true), 10)
+         break;
+    }
   }
+  const user = GetData("https://virbound.com/system/user/user.php");
 
   return ( 
     <>
@@ -47,33 +56,10 @@ const User = () => {
       <div className="wrapper wrapperPadding">
       <ContentBlock>
           {user ? // See this if user is logged in
-          <div className='userLogged'>
-            <div className='userNameWrapper'>
-              <div className='userAvatar' style={{backgroundColor: `${user['avatarColor']}88`}}>{user['avatarIcon']}</div>
-              <Subtitle>{user['name']}</Subtitle>
-              {/* <button className='userLogout' onClick={() => logout()}></button> */}
-            </div>
-            <div className='userContentWrapper'>
-              <div className='userContentBlock' style={{flexDirection: "row", flexWrap: "wrap"}}>
-                {user.badges ? 
-                  user['badges'].split(",").map((item:any) => (
-                    <Badge id={item} />
-                  ))
-                :
-                  <>
-                  <Subtitle>You have not earned any badges yet</Subtitle>
-                  <a href='/wiki?navTo=1'><Button>How to earn?</Button></a>
-                  </>
-                }
-              </div>
-              <div className='userContentBlock'>
-                <Subtitle>MineBound account is not linked</Subtitle>
-                <a><Button>Link</Button></a>
-              </div>
-            </div>
-            <Button type='inline'>Settings</Button>
-            <button className='userLogout2' onClick={() => logout()}></button>
-          </div>
+            openSettings ?
+              UserSettings(user, userInfo, setUserInfo, changeUserInfoStatus, setChangeUserInfoStatus)
+            :
+              UserProfile(user)
           : // See this if user is NOT logged in
           <div className='userNotLogged'>
             <Subtitle>

@@ -53,6 +53,7 @@
   border-radius: 10px;
   flex-basis: 40px;
 } */
+
 button.userLogout2 {
   display: inline-block;
   width: 36px;
@@ -77,6 +78,7 @@ button.userLogout2:hover {
   width: calc(100% - 4px);
 }
 .userContentBlock {
+  position: relative;
   display: flex;
   flex-direction: column;
   text-align: center;
@@ -92,6 +94,69 @@ button.userLogout2:hover {
     text-align: center;
     font-size: 1.2rem;
 }
+
+/* User settings */
+.userSettings .userContentWrapper {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  overflow: hidden;
+  gap: 6px;
+  align-items: baseline;
+}
+
+.userContentWrapper .input {
+  display: block;
+  width: calc(100% - 44px);
+  padding: 10px 15px;
+  border: 1px solid var(--gray-3);
+  background-color: var(--gray);
+  color: var(--dark);
+  border-radius: 8px;
+}
+.userContentWrapper .input.disabled {
+  width: calc(100% - 59px);
+  padding: 10px 15px 10px 30px;
+  color: var(--dark);
+  border: 1px solid var(--gray-3);
+  background: center left 5px / 20px no-repeat url(https://img.icons8.com/ios-filled/50/lock-2.png);
+  background-color: var(--gray-2);
+  border-radius: 8px;
+  opacity: 0.75;
+}
+
+.userAvatarSettings:hover {
+  background-color: var(--gray-3)!important;
+  background: center / 20px no-repeat url(https://img.icons8.com/glyph-neue/64/dice-cubes.png);
+  color: transparent;
+  cursor: pointer;
+  opacity: 0.75;
+}
+.userNameSettings:hover {
+  background-color: var(--gray-3)!important;
+  background: center / 20px no-repeat url(https://img.icons8.com/glyph-neue/64/dice-cubes.png);
+  color: transparent;
+  cursor: pointer;
+  padding: 4px;
+  border-radius: 8px;
+  opacity: 0.75;
+}
+
+.settingsButton {
+  font-family: Title, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  display: inline-block;
+  padding: 10px 24px;
+  margin: 6px;
+  border: none;
+  background: var(--accent-ht);
+  color: var(--dark);
+  border-radius: 12px;
+  font-size: 16px;
+}
+.settingsButton:hover {
+  background: var(--accent);
+}
+
 
 @media (max-width: 896px) {
   .userContentWrapper {
