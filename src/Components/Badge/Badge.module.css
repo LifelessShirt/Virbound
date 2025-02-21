@@ -1,10 +1,52 @@
 .badge {
+    position: relative;
     display: inline-block;
     width: 64px; height: 64px;
     margin: 6px;
-    background-color: var(--gray-2-ht);
+    background-color: var(--gray-2);
     border-radius: 8px;
     --base-bg: center / 48px no-repeat;
+}
+
+.tooltip {
+    opacity: 0;
+    max-height: 0px;
+    overflow: hidden;
+}
+.badge:hover .tooltip {
+    opacity: 1;
+    padding: 8px 8px;
+    position: absolute;
+    left: 0;
+    width: 128px;
+    max-height: 1080px;
+    top: 110%;
+    z-index: 1;
+    background-color: var(--gray-2);
+    border-radius: 8px;
+    transform: translateX(-25%);
+    float:left;
+}
+.badge:hover .tooltip::after {
+    content: '';
+    position: absolute;
+    left: 100%;
+    top: 100%;
+    width: 0;
+    height: 0;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-top: 20px solid #000;
+    clear: both;
+}
+
+.tooltipTitle {
+    font-size: 1.25em;
+    color: var(--dark);
+}
+.tooltipDescription {
+    color: var(--dark);
+    opacity: 0.75;
 }
 
 .mini {
@@ -14,19 +56,23 @@
     --base-bg: center / 40px no-repeat;
 }
 
+.badge-Season-One {
+    background: var(--base-bg) url(../../Media/Badges/Season-1.png);
+    background-color: var(--gray-2);
+}
 .badge-Hawkeye {
     background: var(--base-bg) url(../../Media/Badges/Hawkeye.png);
-    background-color: var(--gray-2-ht);
+    background-color: var(--gray-2);
 }
 .badge-Explorer {
     background: var(--base-bg)  url(../../Media/Badges/Explorer.png);
-    background-color: var(--gray-2-ht);
+    background-color: var(--gray-2);
 }
 .badge-Dragonborn {
     background: var(--base-bg)  url(../../Media/Badges/Dragonborn.png);
-    background-color: var(--gray-2-ht);
+    background-color: var(--gray-2);
 }
 .badge-Fighter {
     background: var(--base-bg)  url(../../Media/Badges/Fighter.png);
-    background-color: var(--gray-2-ht);
+    background-color: var(--gray-2);
 }
