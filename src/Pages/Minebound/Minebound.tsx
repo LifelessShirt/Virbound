@@ -10,7 +10,7 @@ function Minebound() {
   return ( <>
     <div className="wrapper">
     <video className='minebound-video' autoPlay muted loop>
-        <source src="videos/minebound.bg.webm" type="video/webm" />
+        <source src="videos/minebound.bg.2.webm" type="video/webm" />
     </video>
     <div className='minebound-video-hover'></div>
       <div className="fullSizeBlock"><div className="fullSizeBlockMinebound">
