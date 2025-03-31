@@ -5,10 +5,9 @@ import './User.css';
 import { Title } from '../../Components/Title';
 import axios from 'axios';
 import Alerts from '../../Utils/Alerts/Alerts';
-import { randomInt } from 'crypto';
 
 const UserSettings = (
-    user: {"error": Boolean,"name": String,"email": String,"avatarColor": String,"avatarIcon": String,"badges": String,"status": String}, 
+    user:{"error": Boolean,"name": String,"email": String,"avatarColor": String,"avatarIcon": String,"badges": String,"status": String}, 
     userInfo:{"avatarColor":String, "avatarIcon":String,"name":String},
     setUserInfo:Dispatch<SetStateAction<{
         avatarColor: String;
@@ -18,7 +17,7 @@ const UserSettings = (
     changeUserInfoStatus:any,
     setChangeUserInfoStatus:Dispatch<any>
     ) => {
-
+    
     // Change user avatar or name
     const changeUserInfo = (type:string) => {
         axios.post('https://virbound.com/system/user/settings.php', {
@@ -62,12 +61,11 @@ const UserSettings = (
                 if (formJson['newPassword'] != "") {
                     localStorage.removeItem("access_token");
                 }
-                setTimeout(() => window.location.reload(), 3000);
+                window.location.reload()
               } else { setChangeUserInfoStatus(<Alerts key={Math.random()} type="warning" message={response.data.status} />) }
             })
             .catch((error) => {
               console.log(error);
-              <Alerts type="success" message={error} />
             })
         } else {
             setChangeUserInfoStatus(<Alerts key={Math.random()} type="info" message="Passwords do not match" />);
@@ -98,7 +96,7 @@ const UserSettings = (
             <input className='input' name='newPassword' placeholder='New password'/>
             <input className='input' name='newPassword2' placeholder='Repeat new password'/>
         </form>
-        <button type='submit' form="settingsForm" className='settingsButton'>Save changes</button><a href='/user'><Button key={2} type='inline'>Back to menu</Button></a>
+        <button type='submit' form="settingsForm" className='settingsButton'>Save changes</button><a href='/user'><Button key={2} type='inline'>Back</Button></a>
     </div>
     );
 }
