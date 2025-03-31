@@ -19,6 +19,29 @@
   --black: #111111;
   --black-ht: #11111188;
 }
+@media (prefers-color-scheme: dark) {
+  :root {
+  --accent: #2c6c4e;
+  --accent-ht: #53d09688;
+  --accent-dark: #53d096;
+  --accent-dark-ht: #53d09688;
+  --white: #1f1f1f;
+  --white-nt: #1f1f1fdd;
+  --white-ht: #1f1f1f88;
+  --gray: #444444;
+  --gray-ht: #44444488;
+  --gray-2: #555555;
+  --gray-2-ht: #55555588;
+  --gray-3: #666666;
+  --gray-3-ht: #66666688;
+  --gray-4: #888888;
+  --gray-4-ht: #88888888;
+  --dark: #ebebeb;
+  --dark-ht: #ebebeb88;
+  --black: #f2f2f2;
+  --black-ht: #f2f2f288;
+  }
+}
 
 @font-face {
   font-family: Main;
@@ -54,7 +77,7 @@ body {
   font-family: Main, sans-serif;
   text-align: center;
   background: var(--gray);
-  color: var(--main);
+  color: var(--dark);
   margin: 0;
   padding: 0;
 }

@@ -52,6 +52,14 @@ a {
   opacity: 1;
 }
 
+@media (prefers-color-scheme: dark) {
+  .menu_block_logo {
+    background: center / 32px no-repeat url(../../Media/logo-accent.svg);
+    background-color: var(--white);
+  }
+}
+
+
 .menu_block_user {
   font-family: Title, sans-serif;
   position: absolute;

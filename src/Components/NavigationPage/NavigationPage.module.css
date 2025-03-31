@@ -8,10 +8,12 @@
 }
 
 .content {
+    font-family: Title, sans-serif;
     position: relative;
     top: 0; left: 0;
     text-align: left;
     overflow: hidden scroll;
+    font-size: 1.5rem;
     background: var(--white);
     flex-basis: calc(80% - 60px);
     height: calc(100% - 132px);
@@ -67,6 +69,19 @@
     transform: translateY(-50%);
     width: 24px; height: 24px;
     background: center / 24px url(../../Media/button_sub_menu.svg) no-repeat;
+}
+
+.content h1 {
+    font-family: Title, sans-serif;
+    font-size: 3rem;
+}
+.content p {
+
+}
+.content code {
+    padding: 2px;
+    background: var(--gray-2);
+    border-radius: 4px;
 }
 
 
