@@ -2,6 +2,7 @@ import Style from './GoogleLoginForm.module.css';
 import { useGoogleLogin } from '@react-oauth/google';
 import axios from 'axios';
 import Alerts from '../../Utils/Alerts/Alerts';
+import GoogleLogo from '../../Media/google-logo.png'
 
 const GoogleLoginForm = ({ setResponseStatus }:{setResponseStatus:React.Dispatch<React.SetStateAction<any>>}) => {
   const googleLogin = useGoogleLogin({
